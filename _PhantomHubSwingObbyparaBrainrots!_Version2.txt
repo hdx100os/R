@@ -62,11 +62,6 @@ local UICornerBtn = Instance.new("UICorner")
 UICornerBtn.CornerRadius = UDim.new(0, 0)
 UICornerBtn.Parent = FloatingButton
 
-local BtnStrokeOuter = Instance.new("UIStroke")
-BtnStrokeOuter.Color = Color3.fromRGB(100, 100, 100)
-BtnStrokeOuter.Thickness = 3
-BtnStrokeOuter.Parent = FloatingButton
-
 local InnerBtn = Instance.new("Frame")
 InnerBtn.Size = UDim2.new(0, 48, 0, 48)
 InnerBtn.Position = UDim2.new(0.5, -24, 0.5, -24)
@@ -78,12 +73,12 @@ local UICornerInner = Instance.new("UICorner")
 UICornerInner.CornerRadius = UDim.new(0, 0)
 UICornerInner.Parent = InnerBtn
 
-local BtnIcon = Instance.new("ImageLabel")
-BtnIcon.Size = UDim2.new(1, 0, 1, 0)
-BtnIcon.BackgroundTransparency = 1
-BtnIcon.Image = "rbxassetid://121715364276099"
-BtnIcon.Parent = InnerBtn
-BtnIcon.ZIndex = 1002
+local BtnLabel = Instance.new("ImageLabel")
+BtnLabel.Size = UDim2.new(1, 0, 1, 0)
+BtnLabel.BackgroundTransparency = 1
+BtnLabel.Image = "rbxassetid://121715364276099"
+BtnLabel.Parent = InnerBtn
+BtnLabel.ZIndex = 1002
 
 local MainFrame = Instance.new("Frame")
 MainFrame.Size = UDim2.new(0, 550, 0, 320)
@@ -96,11 +91,6 @@ MainFrame.ZIndex = 999
 local UICornerFrame = Instance.new("UICorner")
 UICornerFrame.CornerRadius = UDim.new(0, 0)
 UICornerFrame.Parent = MainFrame
-
-local MainStroke = Instance.new("UIStroke")
-MainStroke.Color = Color3.fromRGB(100, 100, 100)
-MainStroke.Thickness = 3
-MainStroke.Parent = MainFrame
 
 local InnerFrame = Instance.new("Frame")
 InnerFrame.Size = UDim2.new(1, -6, 1, -6)
@@ -136,7 +126,7 @@ ScriptTitle.Parent = TopBar
 ScriptTitle.ZIndex = 999
 
 local TitleStroke = Instance.new("UIStroke")
-TitleStroke.Color = Color3.fromRGB(100, 100, 100)
+TitleStroke.Color = Color3.fromRGB(30, 30, 30)
 TitleStroke.Thickness = 2
 TitleStroke.Parent = ScriptTitle
 
@@ -157,7 +147,7 @@ UICornerClose.CornerRadius = UDim.new(0, 0)
 UICornerClose.Parent = CloseBtn
 
 local CloseStroke = Instance.new("UIStroke")
-CloseStroke.Color = Color3.fromRGB(100, 100, 100)
+CloseStroke.Color = Color3.fromRGB(30, 30, 30)
 CloseStroke.Thickness = 2
 CloseStroke.Parent = CloseBtn
 
@@ -169,8 +159,8 @@ SideBar.Parent = InnerFrame
 SideBar.ZIndex = 999
 
 local MainContent = Instance.new("ScrollingFrame")
-MainContent.Size = UDim2.new(1, -145, 1, -75)
-MainContent.Position = UDim2.new(0, 145, 0, 60)
+MainContent.Size = UDim2.new(1, -145, 1, -55)
+MainContent.Position = UDim2.new(0, 145, 0, 50)
 MainContent.BackgroundTransparency = 1
 MainContent.ScrollBarThickness = 2
 MainContent.CanvasSize = UDim2.new(0, 0, 0, 0)
@@ -197,7 +187,7 @@ local function createTabBtn(name, posIdx)
     Instance.new("UICorner", Btn).CornerRadius = UDim.new(0, 0)
 
     local BtnStroke = Instance.new("UIStroke")
-    BtnStroke.Color = Color3.fromRGB(100, 100, 100)
+    BtnStroke.Color = Color3.fromRGB(30, 30, 30)
     BtnStroke.Thickness = 2
     BtnStroke.Parent = Btn
 
@@ -251,7 +241,7 @@ local function createOption(name, startActive, tab, callback)
     Instance.new("UICorner", Container).CornerRadius = UDim.new(0, 0)
 
     local ContainerStroke = Instance.new("UIStroke")
-    ContainerStroke.Color = Color3.fromRGB(100, 100, 100)
+    ContainerStroke.Color = Color3.fromRGB(30, 30, 30)
     ContainerStroke.Thickness = 2
     ContainerStroke.Parent = Container
 
@@ -344,7 +334,7 @@ local function createSlider(name, min, max, default, tab, callback)
     Instance.new("UICorner", Container).CornerRadius = UDim.new(0, 0)
 
     local SliderStroke = Instance.new("UIStroke")
-    SliderStroke.Color = Color3.fromRGB(100, 100, 100)
+    SliderStroke.Color = Color3.fromRGB(30, 30, 30)
     SliderStroke.Thickness = 2
     SliderStroke.Parent = Container
 
@@ -439,7 +429,7 @@ local function createInfoBox(title, desc, tab, isButton, linkToCopy)
     Instance.new("UICorner", Container).CornerRadius = UDim.new(0, 0)
 
     local InfoStroke = Instance.new("UIStroke")
-    InfoStroke.Color = Color3.fromRGB(100, 100, 100)
+    InfoStroke.Color = Color3.fromRGB(30, 30, 30)
     InfoStroke.Thickness = 2
     InfoStroke.Parent = Container
 
@@ -494,7 +484,7 @@ local function createSpecialButton(name, tab, callback)
     Instance.new("UICorner", Container).CornerRadius = UDim.new(0, 0)
 
     local ContainerStroke = Instance.new("UIStroke")
-    ContainerStroke.Color = Color3.fromRGB(100, 100, 100)
+    ContainerStroke.Color = Color3.fromRGB(30, 30, 30)
     ContainerStroke.Thickness = 2
     ContainerStroke.Parent = Container
 
@@ -871,10 +861,10 @@ local function showTab(tabName)
     repositionElements(tabName)
 end
 
-TabMain.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+TabMain.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 
 TabMain.MouseButton1Click:Connect(function()
-    TabMain.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    TabMain.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabBuy.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabFarm.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabConfig.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
@@ -884,7 +874,7 @@ end)
 
 TabBuy.MouseButton1Click:Connect(function()
     TabMain.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
-    TabBuy.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    TabBuy.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabFarm.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabConfig.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabCredits.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
@@ -894,7 +884,7 @@ end)
 TabFarm.MouseButton1Click:Connect(function()
     TabMain.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabBuy.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
-    TabFarm.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    TabFarm.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabConfig.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabCredits.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     showTab("Farm")
@@ -904,7 +894,7 @@ TabConfig.MouseButton1Click:Connect(function()
     TabMain.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabBuy.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabFarm.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
-    TabConfig.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    TabConfig.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabCredits.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     showTab("Config")
 end)
@@ -914,7 +904,7 @@ TabCredits.MouseButton1Click:Connect(function()
     TabBuy.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabFarm.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     TabConfig.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
-    TabCredits.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    TabCredits.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
     showTab("Credits")
 end)
 
