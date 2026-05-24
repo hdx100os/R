@@ -62,10 +62,10 @@ local UICornerBtn = Instance.new("UICorner")
 UICornerBtn.CornerRadius = UDim.new(0, 0)
 UICornerBtn.Parent = FloatingButton
 
-local FloatingButtonStroke = Instance.new("UIStroke")
-FloatingButtonStroke.Color = Color3.fromRGB(100, 100, 100)
-FloatingButtonStroke.Thickness = 3
-FloatingButtonStroke.Parent = FloatingButton
+local BtnStrokeOuter = Instance.new("UIStroke")
+BtnStrokeOuter.Color = Color3.fromRGB(100, 100, 100)
+BtnStrokeOuter.Thickness = 3
+BtnStrokeOuter.Parent = FloatingButton
 
 local InnerBtn = Instance.new("Frame")
 InnerBtn.Size = UDim2.new(0, 48, 0, 48)
@@ -97,10 +97,10 @@ local UICornerFrame = Instance.new("UICorner")
 UICornerFrame.CornerRadius = UDim.new(0, 0)
 UICornerFrame.Parent = MainFrame
 
-local MainFrameStroke = Instance.new("UIStroke")
-MainFrameStroke.Color = Color3.fromRGB(100, 100, 100)
-MainFrameStroke.Thickness = 3
-MainFrameStroke.Parent = MainFrame
+local MainStroke = Instance.new("UIStroke")
+MainStroke.Color = Color3.fromRGB(100, 100, 100)
+MainStroke.Thickness = 3
+MainStroke.Parent = MainFrame
 
 local InnerFrame = Instance.new("Frame")
 InnerFrame.Size = UDim2.new(1, -6, 1, -6)
@@ -158,7 +158,7 @@ UICornerClose.Parent = CloseBtn
 
 local CloseStroke = Instance.new("UIStroke")
 CloseStroke.Color = Color3.fromRGB(100, 100, 100)
-CloseStroke.Thickness = 3
+CloseStroke.Thickness = 2
 CloseStroke.Parent = CloseBtn
 
 local SideBar = Instance.new("Frame")
@@ -169,8 +169,8 @@ SideBar.Parent = InnerFrame
 SideBar.ZIndex = 999
 
 local MainContent = Instance.new("ScrollingFrame")
-MainContent.Size = UDim2.new(1, -145, 1, -55)
-MainContent.Position = UDim2.new(0, 145, 0, 50)
+MainContent.Size = UDim2.new(1, -145, 1, -75)
+MainContent.Position = UDim2.new(0, 145, 0, 60)
 MainContent.BackgroundTransparency = 1
 MainContent.ScrollBarThickness = 2
 MainContent.CanvasSize = UDim2.new(0, 0, 0, 0)
@@ -198,7 +198,7 @@ local function createTabBtn(name, posIdx)
 
     local BtnStroke = Instance.new("UIStroke")
     BtnStroke.Color = Color3.fromRGB(100, 100, 100)
-    BtnStroke.Thickness = 3
+    BtnStroke.Thickness = 2
     BtnStroke.Parent = Btn
 
     return Btn
@@ -252,7 +252,7 @@ local function createOption(name, startActive, tab, callback)
 
     local ContainerStroke = Instance.new("UIStroke")
     ContainerStroke.Color = Color3.fromRGB(100, 100, 100)
-    ContainerStroke.Thickness = 3
+    ContainerStroke.Thickness = 2
     ContainerStroke.Parent = Container
 
     local Label = Instance.new("TextLabel")
@@ -345,7 +345,7 @@ local function createSlider(name, min, max, default, tab, callback)
 
     local SliderStroke = Instance.new("UIStroke")
     SliderStroke.Color = Color3.fromRGB(100, 100, 100)
-    SliderStroke.Thickness = 3
+    SliderStroke.Thickness = 2
     SliderStroke.Parent = Container
 
     local Label = Instance.new("TextLabel")
@@ -440,7 +440,7 @@ local function createInfoBox(title, desc, tab, isButton, linkToCopy)
 
     local InfoStroke = Instance.new("UIStroke")
     InfoStroke.Color = Color3.fromRGB(100, 100, 100)
-    InfoStroke.Thickness = 3
+    InfoStroke.Thickness = 2
     InfoStroke.Parent = Container
 
     local TitleLabel = Instance.new("TextLabel")
@@ -495,7 +495,7 @@ local function createSpecialButton(name, tab, callback)
 
     local ContainerStroke = Instance.new("UIStroke")
     ContainerStroke.Color = Color3.fromRGB(100, 100, 100)
-    ContainerStroke.Thickness = 3
+    ContainerStroke.Thickness = 2
     ContainerStroke.Parent = Container
 
     local Label = Instance.new("TextLabel")
